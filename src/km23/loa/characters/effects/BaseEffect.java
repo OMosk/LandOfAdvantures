@@ -10,6 +10,8 @@ public class BaseEffect {
     private EffectStatus status;
 
     public BaseEffect() {
+         String name;
+         String status;
     }
 
     public void act(BaseCharacter character) {
