@@ -5,39 +5,41 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.InetSocketAddress;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Random;
 
+import km23.loa.game_sessions.GameSession;
+import km23.loa.game_sessions.SingleGameSession;
 import org.java_websocket.WebSocket;
 import org.java_websocket.server.WebSocketServer;
 import org.java_websocket.WebSocketImpl;
 import org.java_websocket.handshake.ClientHandshake;
 import org.java_websocket.framing.Framedata;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 
 
 public class Main extends WebSocketServer{
-    ArrayList<WebSocket> clients = new ArrayList<WebSocket>();
+    //ArrayList<WebSocket> clients = new ArrayList<WebSocket>();
+    HashMap<WebSocket, User> clients = new HashMap<WebSocket, User>();
+    HashMap<Integer, GameSession> sessions = new HashMap<Integer, GameSession>();
+    JSONParser parser = new JSONParser();
+
     public Main(int port){
         super( new InetSocketAddress(port));
     }
     public static void main(String[] args) throws InterruptedException , IOException {
-	// write your code here
-        System.out.println("Hello world");
-
+	    System.out.println("Hello world");
 
         Main s = new Main( 8887 );
         s.start();
-        System.out.println( "ChatServer started on port: " + s.getPort() );
-        int x = 100, y = 100;
-        Random rand = new Random();
+        System.out.println( "Server started on port: " + s.getPort() );
+
         BufferedReader sysin = new BufferedReader( new InputStreamReader( System.in ) );
         while ( true ) {
             String in = sysin.readLine();
-
-            x += rand.nextInt()%3 - 1;
-            y += rand.nextInt()%3 - 1;
-
-            s.sendToAll( "{\"x\": "+ x + ", \"y\": "+y+"}" );
-            System.out.println("Send: " + "{\"x\": "+ x + ", \"y\": "+y+"}");
             if( in.equals( "exit" ) ) {
                 s.stop();
                 break;
@@ -52,7 +54,7 @@ public class Main extends WebSocketServer{
     @Override
     public void onOpen(WebSocket conn, ClientHandshake handshake){
         System.out.println(handshake.getResourceDescriptor());
-        clients.add(conn);
+        clients.put(conn, new User(conn));
     }
 
     @Override
@@ -64,8 +66,18 @@ public class Main extends WebSocketServer{
 
     @Override
     public void onMessage( WebSocket conn, String message ) {
-        this.sendToAll( message );
-        System.out.println( conn + ": " + message );
+
+        User temporaryUser = clients.get(conn);
+        System.out.println("User " + temporaryUser + "sendMessage: " + message);
+        try {
+            JSONObject command = (JSONObject) parser.parse(message);
+            performCommand(command, temporaryUser);
+
+        }
+        catch(ParseException e){
+            System.out.println(e + "Bad command(could not parse) from user " + temporaryUser.getName() );
+        }
+
     }
 
 
@@ -74,15 +86,42 @@ public class Main extends WebSocketServer{
     }
     public void sendToAll(String message)
     {
-        for(WebSocket c: clients){
-            c.send(message);
-        }
+
     }
     @Override
     public void onError( WebSocket conn, Exception ex ) {
         ex.printStackTrace();
         if( conn != null ) {
             // some errors like port binding failed may not be assignable to a specific websocket
+        }
+    }
+    public void performCommand(JSONObject command, User user)
+    {
+        try{
+            String commandType = (String) command.get("commandType");
+            if(commandType!=null && commandType.equals("system")){
+
+                String action = (String)command.get("action");
+
+                if(action!=null && action.equals("setName"))
+                    user.setName((String)command.get("name"));
+
+                if(action!=null && action.equals("createSingleGameSession")){
+                    SingleGameSession session = new SingleGameSession(user);
+                    int id = session.getId();
+                    sessions.put(id, session);
+                    user.getWebSocket().send("singleGamesSession was created");
+                }
+            }else
+            if(commandType.equals("hero"))
+            {
+                user.handleInput(command);
+            }
+
+        }
+        catch(ClassCastException e)
+        {
+            System.out.println(e + " Wrong type of field `commandType`");
         }
     }
 }
