@@ -1,5 +1,6 @@
 package km23.loa.locations;
 
+import km23.loa.characters.FriendlyCharacter;
 import km23.loa.characters.Hero;
 import km23.loa.characters.Monster;
 
@@ -12,6 +13,7 @@ public class Location {
     protected int width, height;
     protected ArrayList<Hero> heroes;
     protected ArrayList<Monster> monsters;
+    protected ArrayList<FriendlyCharacter> friendlyCharacters;
     protected LocationMap locationMap;
 
 

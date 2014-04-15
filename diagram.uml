@@ -3,266 +3,272 @@
   <ID>JAVA</ID>
   <OriginalElement />
   <nodes>
-    <node x="1515.7098958333331" y="0.0">km23.loa.characters.effects.EffectStatus</node>
-    <node x="1263.6272569444443" y="274.0">km23.loa.characters.Hero</node>
-    <node x="2058.6272569444445" y="274.0">km23.loa.characters.effects.ManaDamage</node>
-    <node x="375.0" y="156.0">km23.loa.characters.items.StaminaElixir</node>
-    <node x="254.0" y="156.0">km23.loa.characters.items.HealthElixir</node>
-    <node x="1019.1249999999999" y="274.0">km23.loa.characters.Monster</node>
-    <node x="1109.8743055555556" y="352.0">km23.loa.locations.Location</node>
-    <node x="1836.9598958333331" y="156.0">km23.loa.characters.effects.InstantaneousEffect</node>
-    <node x="730.3348958333332" y="78.0">km23.loa.characters.items.Weapon</node>
+    <node x="1525.698611111111" y="0.0">km23.loa.characters.effects.EffectStatus</node>
+    <node x="1418.4419270833332" y="274.0">km23.loa.characters.Hero</node>
+    <node x="2051.441927083333" y="274.0">km23.loa.characters.effects.ManaDamage</node>
+    <node x="235.0" y="156.0">km23.loa.characters.items.StaminaElixir</node>
+    <node x="114.0" y="156.0">km23.loa.characters.items.HealthElixir</node>
+    <node x="1225.375" y="274.0">km23.loa.characters.Monster</node>
+    <node x="" y="">km23.loa.locations.Location</node>
+    <node x="1850.448611111111" y="156.0">km23.loa.characters.effects.InstantaneousEffect</node>
+    <node x="745.2819444444442" y="78.0">km23.loa.characters.items.Weapon</node>
     <node x="0.0" y="156.0">km23.loa.characters.items.ManaElixir</node>
     <node x="0.0" y="757.0">km23.loa.game_sessions.SingleGameSessionUserException</node>
-    <node x="859.0" y="156.0">km23.loa.characters.items.RangedWeapon</node>
-    <node x="1241.7666666666667" y="684.0">km23.loa.Main</node>
-    <node x="1345.6272569444443" y="274.0">km23.loa.characters.FriendlyCharacter</node>
-    <node x="682.0" y="156.0">km23.loa.characters.items.OneHandedWeapon</node>
-    <node x="135.8338541666667" y="274.0">km23.loa.characters.items.Axe</node>
-    <node x="907.125" y="274.0">km23.loa.characters.items.Crossbow</node>
-    <node x="1122.0760416666665" y="596.0">km23.loa.game_sessions.SingleGameSession</node>
-    <node x="339.83489583333323" y="274.0">km23.loa.characters.items.BearHands</node>
-    <node x="1759.6272569444443" y="274.0">km23.loa.characters.effects.ManaRestoring</node>
-    <node x="661.0022569444443" y="274.0">km23.loa.characters.items.Sword</node>
-    <node x="749.8743055555555" y="352.0">km23.loa.game_sessions.GameSessionSettings</node>
-    <node x="1320.6272569444443" y="430.0">km23.loa.UserStatus</node>
-    <node x="1481.6272569444443" y="156.0">km23.loa.characters.effects.ContinuousEffect</node>
-    <node x="1122.125" y="274.0">km23.loa.locations.LocationMap</node>
-    <node x="114.0" y="156.0">km23.loa.characters.items.MeleeWeapon</node>
-    <node x="1234.2927083333332" y="156.0">km23.loa.characters.BaseCharacter</node>
-    <node x="1905.6272569444443" y="274.0">km23.loa.characters.effects.HealthRestoring</node>
-    <node x="822.3772569444443" y="274.0">km23.loa.characters.items.Bow</node>
-    <node x="1300.2105902777776" y="518.0">km23.loa.User</node>
-    <node x="1520.7098958333331" y="78.0">km23.loa.characters.effects.BaseEffect</node>
-    <node x="506.0" y="156.0">km23.loa.characters.items.TwoHandedWeapon</node>
-    <node x="1038.3772569444443" y="430.0">km23.loa.game_sessions.GameSession</node>
-    <node x="498.83489583333323" y="0.0">km23.loa.characters.items.BaseItem</node>
-    <node x="938.8743055555555" y="352.0">km23.loa.game_sessions.GameSessionState</node>
-    <node x="1507.6272569444443" y="274.0">km23.loa.characters.effects.Paralysis</node>
-    <node x="285.83489583333335" y="78.0">km23.loa.characters.items.Elixir</node>
-    <node x="1614.6272569444443" y="274.0">km23.loa.characters.effects.HealthDamage</node>
-    <node x="985.3260416666664" y="518.0">km23.loa.game_sessions.MultipleGameSession</node>
+    <node x="903.25" y="156.0">km23.loa.characters.items.RangedWeapon</node>
+    <node x="1314.7666666666667" y="684.0">km23.loa.Main</node>
+    <node x="1063.375" y="274.0">km23.loa.characters.FriendlyCharacter</node>
+    <node x="705.875" y="156.0">km23.loa.characters.items.OneHandedWeapon</node>
+    <node x="387.3377604166667" y="274.0">km23.loa.characters.items.Axe</node>
+    <node x="951.375" y="274.0">km23.loa.characters.items.Crossbow</node>
+    <node x="1133.3833333333332" y="596.0">km23.loa.game_sessions.SingleGameSession</node>
+    <node x="480.7819444444442" y="274.0">km23.loa.characters.items.BearHands</node>
+    <node x="1905.4419270833332" y="274.0">km23.loa.characters.effects.ManaRestoring</node>
+    <node x="652.7127604166667" y="274.0">km23.loa.characters.items.Sword</node>
+    <node x="1245.384722222222" y="352.0">km23.loa.game_sessions.GameSessionSettings</node>
+    <node x="742.7127604166666" y="274.0">km23.loa.locations.LocationMap</node>
+    <node x="1475.4419270833332" y="430.0">km23.loa.UserStatus</node>
+    <node x="1474.4419270833332" y="156.0">km23.loa.characters.effects.ContinuousEffect</node>
+    <node x="" y="">km23.loa.characters.items.MeleeWeapon</node>
+    <node x="1752.4419270833332" y="274.0">km23.loa.characters.effects.HealthRestoring</node>
+    <node x="1246.0625" y="156.0">km23.loa.characters.BaseCharacter</node>
+    <node x="873.7127604166666" y="274.0">km23.loa.characters.items.Bow</node>
+    <node x="1455.0252604166667" y="518.0">km23.loa.User</node>
+    <node x="1530.698611111111" y="78.0">km23.loa.characters.effects.BaseEffect</node>
+    <node x="529.875" y="156.0">km23.loa.characters.items.TwoHandedWeapon</node>
+    <node x="1142.125" y="430.0">km23.loa.game_sessions.GameSession</node>
+    <node x="443.7819444444442" y="0.0">km23.loa.characters.items.BaseItem</node>
+    <node x="969.3847222222221" y="352.0">km23.loa.game_sessions.GameSessionState</node>
+    <node x="1500.4419270833332" y="274.0">km23.loa.characters.effects.Paralysis</node>
+    <node x="167.75" y="91.0">km23.loa.characters.items.Elixir</node>
+    <node x="1607.4419270833332" y="274.0">km23.loa.characters.effects.HealthDamage</node>
+    <node x="1182.6333333333332" y="518.0">km23.loa.game_sessions.MultipleGameSession</node>
   </nodes>
   <notes />
   <edges>
     <edge source="km23.loa.locations.Location" target="km23.loa.characters.Monster">
-      <point x="-28.333333333333314" y="-14.0" />
-      <point x="1124.040972222222" y="332.0" />
-      <point x="1060.625" y="332.0" />
+      <point x="10.625" y="-14.0" />
+      <point x="1193.509722222222" y="322.0" />
+      <point x="1266.875" y="322.0" />
       <point x="0.0" y="14.0" />
     </edge>
     <edge source="km23.loa.characters.effects.InstantaneousEffect" target="km23.loa.characters.effects.BaseEffect">
       <point x="0.0" y="-14.0" />
-      <point x="1916.4598958333331" y="131.0" />
-      <point x="1603.2098958333331" y="131.0" />
+      <point x="1929.948611111111" y="136.0" />
+      <point x="1613.198611111111" y="136.0" />
       <point x="33.0" y="14.0" />
     </edge>
     <edge source="km23.loa.characters.BaseCharacter" target="km23.loa.characters.items.Weapon">
       <point x="-31.25" y="-14.0" />
-      <point x="1265.5427083333332" y="131.0" />
-      <point x="799.5015624999999" y="131.0" />
-      <point x="27.666666666666686" y="14.0" />
+      <point x="1277.3125" y="136.0" />
+      <point x="814.4486111111108" y="136.0" />
+      <point x="27.66666666666663" y="14.0" />
     </edge>
     <edge source="km23.loa.User" target="km23.loa.characters.Hero">
       <point x="0.0" y="-14.0" />
-      <point x="1330.7105902777776" y="478.0" />
-      <point x="1310.1272569444443" y="478.0" />
+      <point x="1485.5252604166667" y="478.0" />
+      <point x="1464.9419270833332" y="478.0" />
       <point x="15.5" y="14.0" />
     </edge>
     <edge source="km23.loa.game_sessions.SingleGameSession" target="km23.loa.game_sessions.GameSession">
       <point x="-38.75" y="-14.0" />
-      <point x="1160.8260416666665" y="498.0" />
-      <point x="1120.2772569444444" y="498.0" />
-      <point x="23.400000000000006" y="14.0" />
+      <point x="1172.1333333333332" y="498.0" />
+      <point x="1200.625" y="498.0" />
+      <point x="0.0" y="14.0" />
     </edge>
     <edge source="km23.loa.characters.effects.HealthRestoring" target="km23.loa.characters.effects.InstantaneousEffect">
       <point x="0.0" y="-14.0" />
-      <point x="1972.1272569444443" y="254.0" />
-      <point x="1936.3348958333331" y="254.0" />
-      <point x="19.875" y="14.0" />
+      <point x="1818.9419270833332" y="254.0" />
+      <point x="1910.073611111111" y="254.0" />
+      <point x="-19.875" y="14.0" />
     </edge>
     <edge source="km23.loa.characters.items.OneHandedWeapon" target="km23.loa.characters.items.Weapon">
       <point x="0.0" y="-14.0" />
-      <point x="760.5" y="131.0" />
-      <point x="771.8348958333332" y="131.0" />
+      <point x="784.375" y="136.0" />
+      <point x="786.7819444444442" y="136.0" />
       <point x="0.0" y="14.0" />
-    </edge>
-    <edge source="km23.loa.User" target="km23.loa.game_sessions.GameSession">
-      <point x="-20.33333333333333" y="-14.0" />
-      <point x="1310.3772569444443" y="488.0" />
-      <point x="1143.6772569444443" y="488.0" />
-      <point x="46.80000000000001" y="14.0" />
     </edge>
     <edge source="km23.loa.Main" target="km23.loa.game_sessions.GameSession">
       <point x="-25.41666666666663" y="-14.0" />
-      <point x="1246.85" y="664.0" />
-      <point x="964.6593749999998" y="664.0" />
-      <point x="964.6593749999998" y="478.0" />
-      <point x="1050.0772569444443" y="478.0" />
+      <point x="1319.85" y="664.0" />
+      <point x="1112.7166666666667" y="664.0" />
+      <point x="1112.7166666666667" y="478.0" />
+      <point x="1153.825" y="478.0" />
       <point x="-46.8" y="14.0" />
+    </edge>
+    <edge source="km23.loa.User" target="km23.loa.game_sessions.GameSession">
+      <point x="-20.33333333333333" y="-14.0" />
+      <point x="1465.1919270833334" y="488.0" />
+      <point x="1247.4250000000002" y="488.0" />
+      <point x="46.80000000000001" y="14.0" />
+    </edge>
+    <edge source="km23.loa.characters.items.BearHands" target="km23.loa.characters.items.TwoHandedWeapon">
+      <point x="25.249999999999943" y="-14.0" />
+      <point x="556.5319444444442" y="254.0" />
+      <point x="607.875" y="254.0" />
+      <point x="0.0" y="14.0" />
     </edge>
     <edge source="km23.loa.characters.items.Weapon" target="km23.loa.characters.items.BaseItem">
       <point x="0.0" y="-14.0" />
-      <point x="771.8348958333332" y="53.0" />
-      <point x="566.3348958333332" y="53.0" />
-      <point x="22.5" y="14.0" />
-    </edge>
-    <edge source="km23.loa.characters.items.BearHands" target="km23.loa.characters.items.TwoHandedWeapon">
-      <point x="25.25" y="-14.0" />
-      <point x="415.58489583333323" y="254.0" />
-      <point x="584.0" y="254.0" />
-      <point x="0.0" y="14.0" />
+      <point x="786.7819444444442" y="53.0" />
+      <point x="511.2819444444442" y="53.0" />
+      <point x="22.499999999999943" y="14.0" />
     </edge>
     <edge source="km23.loa.characters.effects.ContinuousEffect" target="km23.loa.characters.effects.BaseEffect">
       <point x="0.0" y="-14.0" />
-      <point x="1551.1272569444443" y="131.0" />
-      <point x="1570.2098958333331" y="131.0" />
+      <point x="1543.9419270833332" y="136.0" />
+      <point x="1580.198611111111" y="136.0" />
       <point x="0.0" y="14.0" />
     </edge>
     <edge source="km23.loa.characters.items.Crossbow" target="km23.loa.characters.items.RangedWeapon">
       <point x="23.0" y="-14.0" />
-      <point x="976.125" y="254.0" />
-      <point x="957.25" y="254.0" />
+      <point x="1020.375" y="254.0" />
+      <point x="1001.5" y="254.0" />
       <point x="32.75" y="14.0" />
     </edge>
     <edge source="km23.loa.characters.items.Bow" target="km23.loa.characters.items.RangedWeapon">
       <point x="14.25" y="-14.0" />
-      <point x="865.1272569444443" y="254.0" />
-      <point x="891.75" y="254.0" />
+      <point x="916.4627604166666" y="254.0" />
+      <point x="936.0" y="254.0" />
       <point x="-32.75" y="14.0" />
     </edge>
     <edge source="km23.loa.characters.items.Axe" target="km23.loa.characters.items.MeleeWeapon">
       <point x="-13.5" y="-14.0" />
-      <point x="149.3338541666667" y="254.0" />
-      <point x="134.0" y="254.0" />
+      <point x="400.8377604166667" y="254.0" />
+      <point x="386.0" y="254.0" />
       <point x="-40.0" y="14.0" />
     </edge>
     <edge source="km23.loa.characters.items.BearHands" target="km23.loa.characters.items.MeleeWeapon">
-      <point x="-25.25" y="-14.0" />
-      <point x="365.08489583333323" y="234.0" />
-      <point x="174.0" y="234.0" />
+      <point x="-25.250000000000057" y="-14.0" />
+      <point x="506.0319444444442" y="234.0" />
+      <point x="426.0" y="234.0" />
       <point x="0.0" y="14.0" />
     </edge>
     <edge source="km23.loa.Main" target="km23.loa.game_sessions.SingleGameSession">
       <point x="-5.083333333333371" y="-14.0" />
-      <point x="1267.1833333333334" y="644.0" />
-      <point x="1199.5760416666665" y="644.0" />
+      <point x="1340.1833333333334" y="644.0" />
+      <point x="1210.8833333333332" y="644.0" />
       <point x="0.0" y="14.0" />
     </edge>
     <edge source="km23.loa.characters.items.ManaElixir" target="km23.loa.characters.items.Elixir">
       <point x="0.0" y="-14.0" />
-      <point x="47.0" y="131.0" />
-      <point x="295.83489583333335" y="131.0" />
-      <point x="-20.0" y="14.0" />
+      <point x="47.0" y="126.0" />
+      <point x="168.08333333333337" y="126.0" />
+      <point x="-0.6666666666666572" y="1.0" />
+    </edge>
+    <edge source="km23.loa.locations.Location" target="km23.loa.characters.FriendlyCharacter">
+      <point x="-10.625" y="-14.0" />
+      <point x="1172.259722222222" y="322.0" />
+      <point x="1134.375" y="322.0" />
+      <point x="0.0" y="14.0" />
     </edge>
     <edge source="km23.loa.characters.items.HealthElixir" target="km23.loa.characters.items.Elixir">
       <point x="0.0" y="-14.0" />
-      <point x="304.5" y="131.0" />
-      <point x="315.83489583333335" y="131.0" />
-      <point x="0.0" y="14.0" />
+      <point x="164.5" y="136.0" />
+      <point x="168.75" y="136.0" />
+      <point x="0.0" y="1.0" />
     </edge>
     <edge source="km23.loa.characters.items.Bow" target="km23.loa.characters.items.TwoHandedWeapon">
       <point x="-14.25" y="-14.0" />
-      <point x="836.6272569444443" y="214.0" />
-      <point x="636.0" y="214.0" />
+      <point x="887.9627604166666" y="214.0" />
+      <point x="659.875" y="214.0" />
       <point x="52.0" y="14.0" />
     </edge>
     <edge source="km23.loa.characters.items.Axe" target="km23.loa.characters.items.TwoHandedWeapon">
       <point x="13.5" y="-14.0" />
-      <point x="176.3338541666667" y="244.0" />
-      <point x="532.0" y="244.0" />
+      <point x="427.8377604166667" y="244.0" />
+      <point x="555.875" y="244.0" />
       <point x="-52.0" y="14.0" />
-    </edge>
-    <edge source="km23.loa.game_sessions.GameSession" target="km23.loa.game_sessions.GameSessionSettings">
-      <point x="-43.875" y="-14.0" />
-      <point x="1053.0022569444443" y="410.0" />
-      <point x="834.3743055555555" y="410.0" />
-      <point x="0.0" y="14.0" />
     </edge>
     <edge source="km23.loa.characters.items.TwoHandedWeapon" target="km23.loa.characters.items.Weapon">
       <point x="0.0" y="-14.0" />
-      <point x="584.0" y="131.0" />
-      <point x="744.1682291666666" y="131.0" />
-      <point x="-27.666666666666686" y="14.0" />
+      <point x="607.875" y="136.0" />
+      <point x="759.1152777777776" y="136.0" />
+      <point x="-27.66666666666663" y="14.0" />
+    </edge>
+    <edge source="km23.loa.game_sessions.GameSession" target="km23.loa.game_sessions.GameSessionSettings">
+      <point x="43.875" y="-14.0" />
+      <point x="1244.5" y="410.0" />
+      <point x="1329.884722222222" y="410.0" />
+      <point x="0.0" y="14.0" />
     </edge>
     <edge source="km23.loa.characters.Hero" target="km23.loa.characters.BaseCharacter">
       <point x="0.0" y="-14.0" />
-      <point x="1294.6272569444443" y="254.0" />
-      <point x="1296.7927083333332" y="254.0" />
-      <point x="0.0" y="14.0" />
+      <point x="1449.4419270833332" y="254.0" />
+      <point x="1350.2291666666665" y="254.0" />
+      <point x="41.66666666666663" y="14.0" />
+    </edge>
+    <edge source="km23.loa.locations.Location" target="km23.loa.characters.Hero">
+      <point x="31.875" y="-14.0" />
+      <point x="1214.759722222222" y="332.0" />
+      <point x="1433.9419270833332" y="332.0" />
+      <point x="-15.5" y="14.0" />
     </edge>
     <edge source="km23.loa.characters.BaseCharacter" target="km23.loa.characters.effects.BaseEffect">
       <point x="31.25" y="-14.0" />
-      <point x="1328.0427083333332" y="131.0" />
-      <point x="1537.2098958333331" y="131.0" />
+      <point x="1339.8125" y="126.0" />
+      <point x="1547.198611111111" y="126.0" />
       <point x="-33.0" y="14.0" />
-    </edge>
-    <edge source="km23.loa.locations.Location" target="km23.loa.characters.Hero">
-      <point x="28.33333333333337" y="-14.0" />
-      <point x="1180.7076388888888" y="332.0" />
-      <point x="1279.1272569444443" y="332.0" />
-      <point x="-15.5" y="14.0" />
     </edge>
     <edge source="km23.loa.characters.effects.ManaRestoring" target="km23.loa.characters.effects.InstantaneousEffect">
       <point x="0.0" y="-14.0" />
-      <point x="1822.6272569444443" y="254.0" />
-      <point x="1896.5848958333331" y="254.0" />
-      <point x="-19.875" y="14.0" />
+      <point x="1968.4419270833332" y="254.0" />
+      <point x="1949.823611111111" y="254.0" />
+      <point x="19.875" y="14.0" />
     </edge>
     <edge source="km23.loa.characters.items.Crossbow" target="km23.loa.characters.items.OneHandedWeapon">
       <point x="-23.0" y="-14.0" />
-      <point x="930.125" y="204.0" />
-      <point x="799.75" y="204.0" />
+      <point x="974.375" y="204.0" />
+      <point x="823.625" y="204.0" />
       <point x="39.25" y="14.0" />
     </edge>
     <edge source="km23.loa.User" target="km23.loa.UserStatus">
       <point x="20.33333333333333" y="-14.0" />
-      <point x="1351.043923611111" y="498.0" />
-      <point x="1371.6272569444443" y="498.0" />
+      <point x="1505.85859375" y="498.0" />
+      <point x="1526.4419270833332" y="498.0" />
       <point x="0.0" y="14.0" />
     </edge>
     <edge source="km23.loa.characters.FriendlyCharacter" target="km23.loa.characters.BaseCharacter">
       <point x="0.0" y="-14.0" />
-      <point x="1416.6272569444443" y="254.0" />
-      <point x="1338.459375" y="254.0" />
-      <point x="41.66666666666663" y="14.0" />
+      <point x="1134.375" y="244.0" />
+      <point x="1266.8958333333333" y="244.0" />
+      <point x="-41.66666666666663" y="14.0" />
     </edge>
     <edge source="km23.loa.characters.items.Sword" target="km23.loa.characters.items.OneHandedWeapon">
       <point x="17.5" y="-14.0" />
-      <point x="713.5022569444443" y="254.0" />
-      <point x="721.25" y="254.0" />
+      <point x="705.2127604166667" y="254.0" />
+      <point x="745.125" y="254.0" />
       <point x="-39.25" y="14.0" />
-    </edge>
-    <edge source="km23.loa.characters.items.StaminaElixir" target="km23.loa.characters.items.Elixir">
-      <point x="0.0" y="-14.0" />
-      <point x="430.5" y="131.0" />
-      <point x="335.83489583333335" y="131.0" />
-      <point x="20.0" y="14.0" />
     </edge>
     <edge source="km23.loa.Main" target="km23.loa.User">
       <point x="15.25" y="-14.0" />
-      <point x="1287.5166666666667" y="654.0" />
-      <point x="1335.793923611111" y="654.0" />
-      <point x="1335.793923611111" y="571.0" />
-      <point x="1338.3355902777776" y="571.0" />
+      <point x="1360.5166666666667" y="654.0" />
+      <point x="1490.60859375" y="654.0" />
+      <point x="1490.60859375" y="571.0" />
+      <point x="1493.1502604166667" y="571.0" />
       <point x="7.625" y="14.0" />
+    </edge>
+    <edge source="km23.loa.characters.items.StaminaElixir" target="km23.loa.characters.items.Elixir">
+      <point x="0.0" y="-14.0" />
+      <point x="290.5" y="126.0" />
+      <point x="169.41666666666663" y="126.0" />
+      <point x="0.6666666666666572" y="1.0" />
     </edge>
     <edge source="km23.loa.game_sessions.MultipleGameSession" target="km23.loa.game_sessions.GameSession">
       <point x="0.0" y="-14.0" />
-      <point x="1067.8260416666665" y="498.0" />
-      <point x="1096.8772569444443" y="498.0" />
-      <point x="0.0" y="14.0" />
+      <point x="1265.1333333333332" y="498.0" />
+      <point x="1224.025" y="498.0" />
+      <point x="23.400000000000006" y="14.0" />
     </edge>
     <edge source="km23.loa.game_sessions.GameSession" target="km23.loa.game_sessions.GameSessionState">
-      <point x="-14.625" y="-14.0" />
-      <point x="1082.2522569444443" y="400.0" />
-      <point x="1014.3743055555555" y="400.0" />
+      <point x="-43.875" y="-14.0" />
+      <point x="1156.75" y="410.0" />
+      <point x="1044.884722222222" y="410.0" />
       <point x="0.0" y="14.0" />
     </edge>
     <edge source="km23.loa.characters.effects.HealthDamage" target="km23.loa.characters.effects.InstantaneousEffect">
       <point x="0.0" y="-14.0" />
-      <point x="1677.1272569444443" y="244.0" />
-      <point x="1856.8348958333331" y="244.0" />
+      <point x="1669.9419270833332" y="244.0" />
+      <point x="1870.323611111111" y="244.0" />
       <point x="-59.625" y="14.0" />
     </edge>
     <edge source="km23.loa.characters.effects.BaseEffect" target="km23.loa.characters.effects.EffectStatus">
@@ -271,52 +277,52 @@
     </edge>
     <edge source="km23.loa.characters.items.Sword" target="km23.loa.characters.items.MeleeWeapon">
       <point x="-17.5" y="-14.0" />
-      <point x="678.5022569444443" y="224.0" />
-      <point x="214.0" y="224.0" />
+      <point x="670.2127604166667" y="224.0" />
+      <point x="466.0" y="224.0" />
       <point x="40.0" y="14.0" />
     </edge>
     <edge source="km23.loa.game_sessions.SingleGameSession" target="km23.loa.User">
       <point x="38.75" y="-14.0" />
-      <point x="1238.3260416666665" y="571.0" />
-      <point x="1307.8355902777776" y="571.0" />
+      <point x="1249.6333333333332" y="571.0" />
+      <point x="1462.6502604166667" y="571.0" />
       <point x="-22.875" y="14.0" />
     </edge>
     <edge source="km23.loa.locations.Location" target="km23.loa.locations.LocationMap">
-      <point x="0.0" y="-14.0" />
-      <point x="1152.3743055555556" y="322.0" />
-      <point x="1177.625" y="322.0" />
+      <point x="-31.875" y="-14.0" />
+      <point x="1151.009722222222" y="332.0" />
+      <point x="798.2127604166666" y="332.0" />
       <point x="0.0" y="14.0" />
-    </edge>
-    <edge source="km23.loa.game_sessions.GameSession" target="km23.loa.locations.Location">
-      <point x="43.875" y="-14.0" />
-      <point x="1140.7522569444443" y="410.0" />
-      <point x="1173.6243055555556" y="410.0" />
-      <point x="21.25" y="14.0" />
     </edge>
     <edge source="km23.loa.characters.effects.ManaDamage" target="km23.loa.characters.effects.InstantaneousEffect">
       <point x="0.0" y="-14.0" />
-      <point x="2117.6272569444445" y="244.0" />
-      <point x="1976.0848958333331" y="244.0" />
+      <point x="2110.441927083333" y="254.0" />
+      <point x="1989.573611111111" y="254.0" />
       <point x="59.625" y="14.0" />
     </edge>
-    <edge source="km23.loa.characters.items.Elixir" target="km23.loa.characters.items.BaseItem">
-      <point x="0.0" y="-14.0" />
-      <point x="315.83489583333335" y="53.0" />
-      <point x="521.3348958333332" y="53.0" />
-      <point x="-22.5" y="14.0" />
+    <edge source="km23.loa.game_sessions.GameSession" target="km23.loa.locations.Location">
+      <point x="-14.625" y="-14.0" />
+      <point x="1186.0" y="400.0" />
+      <point x="1161.634722222222" y="400.0" />
+      <point x="-21.25" y="14.0" />
     </edge>
     <edge source="km23.loa.characters.Monster" target="km23.loa.characters.BaseCharacter">
       <point x="0.0" y="-14.0" />
-      <point x="1060.625" y="254.0" />
-      <point x="1255.1260416666664" y="254.0" />
-      <point x="-41.66666666666663" y="14.0" />
+      <point x="1266.875" y="254.0" />
+      <point x="1308.5625" y="254.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="km23.loa.characters.items.Elixir" target="km23.loa.characters.items.BaseItem">
+      <point x="0.0" y="-1.0" />
+      <point x="168.75" y="53.0" />
+      <point x="466.2819444444442" y="53.0" />
+      <point x="-22.5" y="14.0" />
     </edge>
     <edge source="km23.loa.characters.effects.Paralysis" target="km23.loa.characters.effects.ContinuousEffect">
       <point x="0.0" y="-14.0" />
       <point x="0.0" y="14.0" />
     </edge>
   </edges>
-  <settings layout="Hierarchic Group" zoom="0.7182976786527084" x="1208.6234712629107" y="272.1535390659653" />
+  <settings layout="Hierarchic Group" zoom="0.6045662100456621" x="1085.0" y="392.5" />
   <SelectedNodes />
   <Categories />
   <SCOPE>All</SCOPE>
