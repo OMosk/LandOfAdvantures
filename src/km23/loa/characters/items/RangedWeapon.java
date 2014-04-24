@@ -1,7 +1,7 @@
 package km23.loa.characters.items;
 
 /**
- * Created by mosk on 13.04.14.
+ * Created by user on 23.04.2014.
  */
-public interface RangedWeapon {
+public abstract class RangedWeapon extends Weapon implements Ranged {
 }

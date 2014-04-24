@@ -6,7 +6,7 @@ import km23.loa.locations.Location;
 /**
  * Created by mosk on 13.04.14.
  */
-public abstract class GameSession implements Runnable{
+public abstract class GameSession extends Thread{
     protected static int count = 0;
     protected int id = ++count;
     protected GameSessionSettings settings;
@@ -18,13 +18,19 @@ public abstract class GameSession implements Runnable{
         currentLocation = new Location();
     }
 
-    public int getId() {
+    public long getId() {
         return id;
     }
     abstract public void addUser(User user);
     abstract public void removeUser(User user);
+    public void startSession(){
+        state = GameSessionState.IN_PROGRESS;
+        start();
+    }
 
+    public void stopSession(){
+        state = GameSessionState.NOT_ACTIVE;
 
-
+    }
 
 }

@@ -5,8 +5,9 @@ package km23.loa.characters;
  */
 
 import java.util.ArrayList;
+import java.util.Observable;
 
-public class BaseCharacter {
+public class BaseCharacter  extends Observable{
     private int x;
     private int y;
     private ArrayList<km23.loa.characters.effects.BaseEffect> effects;

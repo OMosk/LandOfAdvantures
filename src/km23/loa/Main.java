@@ -11,6 +11,8 @@ import java.util.Random;
 
 import km23.loa.game_sessions.GameSession;
 import km23.loa.game_sessions.SingleGameSession;
+import km23.loa.UserCommandException;
+
 import org.java_websocket.WebSocket;
 import org.java_websocket.server.WebSocketServer;
 import org.java_websocket.WebSocketImpl;
@@ -28,7 +30,7 @@ public class Main extends WebSocketServer{
     JSONParser parser = new JSONParser();
 
     public Main(int port){
-        super( new InetSocketAddress(port));
+        super(new InetSocketAddress(port));
     }
     public static void main(String[] args) throws InterruptedException , IOException {
 	    System.out.println("Hello world");
@@ -41,7 +43,15 @@ public class Main extends WebSocketServer{
         while ( true ) {
             String in = sysin.readLine();
             if( in.equals( "exit" ) ) {
-                s.stop();
+                try {
+                    s.stop();
+                }
+                catch(InterruptedException e){
+                    //
+                }
+                catch(IOException e){
+
+                }
                 break;
             } else if( in.equals( "restart" ) ) {
                 s.stop();
@@ -74,6 +84,9 @@ public class Main extends WebSocketServer{
             performCommand(command, temporaryUser);
 
         }
+        catch(UserCommandException e){
+            System.out.println(e);
+        }
         catch(ParseException e){
             System.out.println(e + "Bad command(could not parse) from user " + temporaryUser.getName() );
         }
@@ -95,7 +108,7 @@ public class Main extends WebSocketServer{
             // some errors like port binding failed may not be assignable to a specific websocket
         }
     }
-    public void performCommand(JSONObject command, User user)
+    public void performCommand(JSONObject command, User user) throws UserCommandException
     {
         try{
             String commandType = (String) command.get("commandType");
@@ -105,18 +118,22 @@ public class Main extends WebSocketServer{
 
                 if(action!=null && action.equals("setName"))
                     user.setName((String)command.get("name"));
-
+                else
                 if(action!=null && action.equals("createSingleGameSession")){
                     SingleGameSession session = new SingleGameSession(user);
-                    int id = session.getId();
+                    int id = (int)session.getId();
                     sessions.put(id, session);
                     user.getWebSocket().send("singleGamesSession was created");
+                    //user.getWebSocket()
+                    session.startSession();
                 }
             }else
             if(commandType.equals("hero"))
             {
                 user.handleInput(command);
             }
+            else
+                throw new UserCommandException(user, "Unknown command type or no type");
 
         }
         catch(ClassCastException e)
@@ -124,4 +141,25 @@ public class Main extends WebSocketServer{
             System.out.println(e + " Wrong type of field `commandType`");
         }
     }
+
+    public void stop() throws InterruptedException, IOException{
+
+        try {
+            for(GameSession i: sessions.values()) i.stop();
+            //for(User i: clients.values()) i.getWebSocket().close(0);
+
+            super.stop();
+        }
+        catch(InterruptedException e){
+            //
+            throw e;
+        }
+        catch(IOException e){
+            //
+            throw e;
+        }
+
+
+    }
+
 }

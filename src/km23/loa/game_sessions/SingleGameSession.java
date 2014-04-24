@@ -27,16 +27,18 @@ public class SingleGameSession extends GameSession {
         this.user = user;
         System.out.println("Created SingleGameSession" + id);
     }
+
     public void run(){
         try {
+                System.out.println("SingleGameSession["+  id + "] perform some actions");
                 while(state==GameSessionState.IN_PROGRESS){
-                    System.out.println("SingleGameSession["+  id + "] perform some actions");
-                    TimeUnit.MILLISECONDS.sleep(100);
 
+                    TimeUnit.MILLISECONDS.sleep(100);
+                    //System.out.println("SingleGameSession["+  id + "] perform some actions");
                 }
         }
         catch(InterruptedException e){
-            //System.out.println(e + e.getLocalizedMessage());
+            System.out.println("SingleGameSession id[" + id + "] finished.");
         }
 
 
