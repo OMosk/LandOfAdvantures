@@ -4,18 +4,16 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.InetSocketAddress;
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Map;
-import java.util.Random;
 
 import km23.loa.game_sessions.GameSession;
 import km23.loa.game_sessions.SingleGameSession;
-import km23.loa.UserCommandException;
 
+import km23.loa.user.User;
+import km23.loa.user.UserCommandException;
+import km23.loa.user.UserStatus;
 import org.java_websocket.WebSocket;
 import org.java_websocket.server.WebSocketServer;
-import org.java_websocket.WebSocketImpl;
 import org.java_websocket.handshake.ClientHandshake;
 import org.java_websocket.framing.Framedata;
 import org.json.simple.JSONObject;
@@ -32,6 +30,7 @@ public class Main extends WebSocketServer{
     public Main(int port){
         super(new InetSocketAddress(port));
     }
+
     public static void main(String[] args) throws InterruptedException , IOException {
 	    System.out.println("Hello world");
 
@@ -70,6 +69,8 @@ public class Main extends WebSocketServer{
     @Override
     public void onClose( WebSocket conn, int code, String reason, boolean remote ) {
         //this.sendToAll( conn + " has left the room!" );
+        User user = clients.get(conn);
+        if(user.getStatus() == UserStatus.IN_GAME) user.leaveGameSession();
         clients.remove(conn);
         System.out.println( conn + " has left the room!" );
     }
@@ -123,6 +124,7 @@ public class Main extends WebSocketServer{
                     SingleGameSession session = new SingleGameSession(user);
                     int id = (int)session.getId();
                     sessions.put(id, session);
+                    //session.addUser(user);
                     user.getWebSocket().send("singleGamesSession was created");
                     //user.getWebSocket()
                     session.startSession();
@@ -146,7 +148,10 @@ public class Main extends WebSocketServer{
 
         try {
             for(GameSession i: sessions.values()) i.stop();
-            //for(User i: clients.values()) i.getWebSocket().close(0);
+            for(User i: clients.values()){
+                this.releaseBuffers(i.getWebSocket());
+                //this.removeConnection(i.getWebSocket());
+            }
 
             super.stop();
         }

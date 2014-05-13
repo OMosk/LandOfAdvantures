@@ -1,6 +1,6 @@
 package km23.loa.game_sessions;
 
-import km23.loa.User;
+import km23.loa.user.User;
 
 import java.util.ArrayList;
 

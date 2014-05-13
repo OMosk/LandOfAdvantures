@@ -1,4 +1,6 @@
-package km23.loa;
+package km23.loa.user;
+
+import km23.loa.user.User;
 
 import java.lang.Exception;
 /**

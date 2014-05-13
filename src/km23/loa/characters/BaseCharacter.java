@@ -58,54 +58,63 @@ public abstract class BaseCharacter  extends Observable{
         if(moving) move(msec);
         //System.out.println("Character" + id + " updating");
     }
-    public void move(int msec){
+    public boolean move(int msec){
+        boolean moved = false;
         float old_x = x, old_y = y;
         switch (direction){
             case 0:{
                 if(location.isLinearPathFree(this, x, y - velocity * msec)){
                     setY(y - velocity * msec);
+                    moved = true;
                 }
                 break;
             }
             case 1:{
                 if(location.isLinearPathFree(this, x + SIN_PI_4 * velocity * msec, y - SIN_PI_4 * velocity * msec)){
                     setXY(x + SIN_PI_4 * velocity * msec, y - SIN_PI_4 * velocity * msec);
+                    moved = true;
                 }
                 break;
             }
             case 2:{
                 if(location.isLinearPathFree(this, x + velocity * msec, y)){
                     setX(x + velocity * msec);
+                    moved = true;
                 }
                 break;
             }
             case 3:{
                 if(location.isLinearPathFree(this, x + SIN_PI_4 * velocity * msec, y + SIN_PI_4 * velocity * msec)){
                     setXY(x + SIN_PI_4 * velocity * msec, y + SIN_PI_4 * velocity * msec);
+                    moved = true;
                 }
                 break;
             }
             case 4:{
                 if(location.isLinearPathFree(this, x, y + velocity * msec)){
                     setY(y + velocity * msec);
+                    moved = true;
                 }
                 break;
             }
             case 5:{
                 if(location.isLinearPathFree(this, x - SIN_PI_4 * velocity * msec, y + SIN_PI_4 * velocity * msec)){
                     setXY(x - SIN_PI_4 * velocity * msec, y + SIN_PI_4 * velocity * msec);
+                    moved = true;
                 }
                 break;
             }
             case 6:{
                 if(location.isLinearPathFree(this, x - velocity * msec, y)){
                     setX(x - velocity * msec);
+                    moved = true;
                 }
                 break;
             }
             case 7:{
                 if(location.isLinearPathFree(this, x - SIN_PI_4 * velocity * msec, y - SIN_PI_4 * velocity * msec)){
                     setXY(x - SIN_PI_4 * velocity * msec, y - SIN_PI_4 * velocity * msec);
+                    moved = true;
                 }
                 break;
             }
@@ -116,6 +125,7 @@ public abstract class BaseCharacter  extends Observable{
             notifyObservers(CharacterStateChange.POSITION);
         }
         //notifyObservers();
+        return moved;
     }
     public void moveInDirection(int msec, int direction){
         setDirection(direction);
@@ -313,7 +323,9 @@ public abstract class BaseCharacter  extends Observable{
 
     public void setMoving(boolean moving) {
         this.moving = moving;
+        setChanged();
         notifyObservers(CharacterStateChange.MOVING);
+        System.out.println("I`m change my moving state");
     }
 
     public boolean isWeaponAttacking() {

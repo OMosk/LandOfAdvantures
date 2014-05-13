@@ -1,4 +1,4 @@
-package km23.loa;
+package km23.loa.user;
 
 /**
  * Created by mosk on 15.04.14.

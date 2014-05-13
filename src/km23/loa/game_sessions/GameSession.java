@@ -1,7 +1,9 @@
 package km23.loa.game_sessions;
 
-import km23.loa.User;
+import km23.loa.user.User;
 import km23.loa.locations.Location;
+
+import java.util.Observer;
 
 /**
  * Created by mosk on 13.04.14.
@@ -13,16 +15,17 @@ public abstract class GameSession extends Thread{
     protected GameSessionState state = GameSessionState.NOT_ACTIVE;
     protected Location currentLocation;
 
-    public GameSession()
-    {
+    public GameSession(){
+
         currentLocation = new Location();
+
     }
 
-    public long getId() {
+    public int getSessionId() {
         return id;
     }
-    abstract public void addUser(User user);
-    abstract public void removeUser(User user);
+    public abstract  void addUser(User user);
+    public abstract  void removeUser(User user);
     public void startSession(){
         state = GameSessionState.IN_PROGRESS;
         start();
