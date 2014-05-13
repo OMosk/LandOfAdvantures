@@ -1,0 +1,12 @@
+<component name="ArtifactManager">
+  <artifact type="war" build-on-make="true" name="LandOfAdvantures:Web">
+    <output-path>$PROJECT_DIR$/</output-path>
+    <root id="archive" name="LandOfAdvantures_Web.war">
+      <element id="javaee-facet-resources" facet="LandOfAdvantures/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes" />
+        <element id="directory" name="lib" />
+      </element>
+    </root>
+  </artifact>
+</component>
