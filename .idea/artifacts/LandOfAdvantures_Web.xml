@@ -1,12 +1,20 @@
 <component name="ArtifactManager">
-  <artifact type="war" build-on-make="true" name="LandOfAdvantures:Web">
-    <output-path>$PROJECT_DIR$/</output-path>
+  <artifact type="war" build-on-make="true" name="LandOfAdvantures_Web">
+    <output-path>$PROJECT_DIR$</output-path>
     <root id="archive" name="LandOfAdvantures_Web.war">
-      <element id="javaee-facet-resources" facet="LandOfAdvantures/web/Web" />
-      <element id="directory" name="WEB-INF">
-        <element id="directory" name="classes" />
-        <element id="directory" name="lib" />
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/LandOfAdvantures_Web/META-INF/MANIFEST.MF" />
       </element>
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="LandOfAdvantures_Web" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="json-simple-1.1.1" />
+          <element id="library" level="project" name="mysql-connector-java-5.1.30-bin" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="LandOfAdvantures_Web/web/Web" />
     </root>
   </artifact>
 </component>
