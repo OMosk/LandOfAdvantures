@@ -34,6 +34,9 @@ public class AuthorizationServlet extends HttpServlet {
             System.out.println("http://"+request.getServerName() + ":" + request.getLocalPort()  + getServletContext().getContextPath() + "/");
 
         }
+        else{
+            response.sendRedirect(request.getHeader("referer")!=null?request.getHeader("referer"): "http://"+request.getServerName() + ":" + request.getLocalPort()  + getServletContext().getContextPath() + "/");
+        }
     }
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
         GlobalParameters.setServletContext(getServletContext());

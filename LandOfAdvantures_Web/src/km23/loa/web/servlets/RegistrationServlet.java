@@ -38,29 +38,27 @@ public class RegistrationServlet extends HttpServlet {
             System.out.println("Login is not free");
             request.setAttribute("show_form", true);
             request.setAttribute("login_problem", true);
-            RequestDispatcher requestDispatcher = getServletContext().getRequestDispatcher("/WEB-INF/jsp/registration.jsp");
-            requestDispatcher.forward(request, response);
+
         }
         else if(!password.equals(rePassword)){
             //pass mismatch
             System.out.println("pass mismatch");
             request.setAttribute("show_form", true);
             request.setAttribute("password_mismatch", true);
-            RequestDispatcher requestDispatcher = getServletContext().getRequestDispatcher("/WEB-INF/jsp/registration.jsp");
-            requestDispatcher.forward(request, response);
+
         }
         else if(!userRegistration.registerUser(login, password)){
             System.out.println("some registration problem");
             request.setAttribute("show_form", true);
             request.setAttribute("registration_problem", true);
-            RequestDispatcher requestDispatcher = getServletContext().getRequestDispatcher("/WEB-INF/jsp/registration.jsp");
-            requestDispatcher.forward(request, response);
+
         }
         else{
             System.out.println("registration success");
             request.setAttribute("registration_success", true);
-            RequestDispatcher requestDispatcher = getServletContext().getRequestDispatcher("/WEB-INF/jsp/registration.jsp");
-            requestDispatcher.forward(request, response);
+
         }
+        RequestDispatcher requestDispatcher = getServletContext().getRequestDispatcher("/WEB-INF/jsp/registration.jsp");
+        requestDispatcher.forward(request, response);
     }
 }

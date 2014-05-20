@@ -35,7 +35,7 @@
 <body>
 <header>
     <span class="logo_caption">
-        <a href="/">LandOfAdvantures</a>
+        <a href="index.jsp">LandOfAdvantures</a>
     </span>
     <div id="subheader_section">
         <% if(!userAuthorization.isAuthorized()){ %>
@@ -65,5 +65,8 @@
         %>
     </div>
 </header>
+<div class="main_block">
+
+</div>
 </body>
 </html>
