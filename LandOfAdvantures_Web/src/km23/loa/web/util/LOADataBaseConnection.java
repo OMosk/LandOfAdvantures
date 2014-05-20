@@ -85,7 +85,7 @@ public class LOADataBaseConnection {
             //instance.resultSet = instance.statement.getResultSet();
             instance.statement = instance.connection.createStatement();
             result = instance.resultSet = instance.statement.executeQuery(queryString);
-            System.out.println("ResultSet==null is" + instance.resultSet==null);
+            //System.out.println("ResultSet==null is" + instance.resultSet==null);
             //return instance.resultSet;
         }
         catch(SQLException e){
@@ -96,6 +96,26 @@ public class LOADataBaseConnection {
             //return null;
         }
         return result;
+    }
+    public static void queryUpdateData(String queryString) throws SQLException{
+        try{
+            if(instance==null){
+                instance = new LOADataBaseConnection();
+            }
+            //instance.statement.execute(queryString);
+            //instance.resultSet = instance.statement.getResultSet();
+            instance.statement = instance.connection.createStatement();
+            instance.statement.executeUpdate(queryString);
+            //System.out.println("ResultSet==null is" + instance.resultSet==null);
+            //return instance.resultSet;
+        }
+        catch(SQLException e){
+            Logger.log(e.getMessage());
+            System.out.println("Query:" + queryString);
+            e.printStackTrace();
+            throw  e;
+            //return null;
+        }
     }
     public static ResultSet getResultSet(){
         if(instance == null) return null;

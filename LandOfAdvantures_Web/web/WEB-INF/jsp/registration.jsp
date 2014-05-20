@@ -1,3 +1,4 @@
+<%@ page import="com.sun.org.apache.xpath.internal.operations.Bool" %>
 <%--
   Created by IntelliJ IDEA.
   User: mosk
@@ -49,17 +50,32 @@
 </header>
 <%
     //String message = request.getAttribute("message");
-    String message = (String)request.getAttribute("message");
+    //String message = (String)request.getAttribute("message");
+    String message = "";
     Boolean showForm = (Boolean) request.getAttribute("show_form");
 
     String login = request.getParameter("login");
-    if(login==null)login = "Логін";
+    if(login==null)login="";//login = "Логін";
     String password = request.getParameter("password");
-    if(password==null)password = "Пароль";
+    if(password==null)password="";//password = "Пароль";
     String rePassword = request.getParameter("re-password");
-    if(rePassword==null)rePassword = "Повторіть пароль";
+    if(rePassword==null)rePassword="";//rePassword = "Повторіть пароль";
+
+    Boolean loginProblem = (Boolean)(request.getAttribute("login_problem"));
+    if(loginProblem!=null && loginProblem) message += "Користувач з таким логіном вже існує";
+
+    Boolean passwordMismatch = (Boolean)(request.getAttribute("password_mismatch"));
+    if(passwordMismatch!=null && passwordMismatch) message += "Перевірте правильність вводу паролів";
+
+    Boolean registrationProblem = (Boolean)(request.getAttribute("registration_problem"));
+    if(registrationProblem!=null && registrationProblem) message += "Не вдалось зареєструвати користувача";
+
+    Boolean registrationSuccess = (Boolean)request.getAttribute("registration_success");
+    if(registrationSuccess!=null && registrationSuccess) message += "Успішно зареєстровано";
+
 
 %>
+    <p><b><%= message==null? "": message %></b></p>
     <% if(showForm!=null && showForm) { %>
     <form method="POST" action="registration">
         <table align="center">
@@ -69,11 +85,11 @@
             </tr>
             <tr>
                 <td align="right">Пароль:</td>
-                <td><input type="text" name="password" placeholder="Пароль" value="<%= password%>"></td>
+                <td><input type="password" name="password" placeholder="Пароль" value="<%= password%>"></td>
             </tr>
             <tr>
                 <td align="right">Повторіть пароль:</td>
-                <td ><input type="text" name="re-password" placeholder="Повторіть пароль" value="<%= rePassword%>"></td>
+                <td ><input type="password" name="re-password" placeholder="Повторіть пароль" value="<%= rePassword%>"></td>
             </tr>
             <tr>
                 <td></td>

@@ -14,5 +14,14 @@
         <servlet-name>RegistrationServlet</servlet-name>
         <url-pattern>/registration</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AuthorizationServlet</servlet-name>
+        <servlet-class>km23.loa.web.servlets.AuthorizationServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AuthorizationServlet</servlet-name>
+        <url-pattern>/authorization</url-pattern>
+    </servlet-mapping>
     
 </web-app>

@@ -1,10 +1,11 @@
+<%@ page import="com.sun.org.apache.xpath.internal.operations.Bool" %>
 <%@ page import="km23.loa.web.util.*" %>
 <%@ page import="km23.loa.web.UserAuthorization" %>
 <%--
   Created by IntelliJ IDEA.
   User: mosk
-  Date: 13.05.14
-  Time: 19:57
+  Date: 20.05.14
+  Time: 2:24
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -23,7 +24,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <title>LandOfAdvantures</title>
+    <title>loa</title>
     <script src="resources/scripts/jquery-2.0.2.min.js"></script>
     <script src="resources/scripts/pixi.js"></script>
     <script src="resources/scripts/keydrown.min.js"></script>
@@ -35,11 +36,11 @@
 <body>
 <header>
     <span class="logo_caption">
-        <a href="/">LandOfAdvantures</a>
+        LandOfAdvantures
     </span>
     <div id="subheader_section">
         <% if(!userAuthorization.isAuthorized()){ %>
-        <form action="authorization" method="POST">
+        <form>
             <table align="center">
                 <tr>
                     <td align="right">Логін</td>
@@ -56,14 +57,22 @@
             </table>
         </form>
         <% }
-        else{
+            else{
         %>
-        <b>Привіт, <%= userAuthorization.getLogin() %></b>
+            <b>Привіт, <%= userAuthorization.getLogin() %></b>
         <%
             }
 
         %>
     </div>
 </header>
+<%
+    Boolean error = (Boolean)request.getAttribute("wrong_loginpassword");
+    if(error!=null && error){
+%>
+        <p>Неправильно введений логін та/або пароль.</p>
+<%
+    }
+%>
 </body>
 </html>

@@ -36,47 +36,33 @@ public class UserRegistration {
     }
     public boolean registerUser(String login, String password){
         try{
-            LOADataBaseConnection.query("INSERT INTO `users`(`user`, `password_hash`) VALUES('"+login+"', '"+ getMD5Hash(password) +"')");
+            LOADataBaseConnection.queryUpdateData("INSERT INTO `users`(`user`, `password_hash`) VALUES('"+login+"', '"+ getMD5Hash(password) +"')");
         }
         catch(SQLException e){
             Logger.log(e.getMessage());
         }
-        return isLoginFree(login);
+        return !isLoginFree(login);
     }
     protected String getMD5Hash(String string){
         String md5Hash = null;
         byte[] stringBytes = null;
+
         try {
             stringBytes = string.getBytes("UTF-8");
-        }
-        catch(UnsupportedEncodingException e){
-            e.printStackTrace();
-        }
-        try {
             MessageDigest md = MessageDigest.getInstance("MD5");
             byte[] hashDigits = md.digest(stringBytes);
             StringBuilder sb = new StringBuilder(2*hashDigits.length);
             for(byte b : hashDigits){
                 sb.append(String.format("%02x", b&0xff));
             }
-
             md5Hash = sb.toString();
-//            try {
-//                //md5Hash = new String(hashDigits, "UTF-8");
-//
-//
-//
-//            }
-//            catch(UnsupportedEncodingException e){
-//                e.printStackTrace();
-//            }
         }
         catch (NoSuchAlgorithmException e){
-            //Logger.log(e.getMessage());
             e.printStackTrace();
         }
-        System.out.println("md5 " + string + " =" + md5Hash);
-        System.out.println("md5 " + string + " =");
+        catch(UnsupportedEncodingException e){
+            e.printStackTrace();
+        }
         return md5Hash;
     }
 

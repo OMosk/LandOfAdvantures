@@ -45,7 +45,7 @@ public class RegistrationServlet extends HttpServlet {
             //pass mismatch
             System.out.println("pass mismatch");
             request.setAttribute("show_form", true);
-            request.setAttribute("password_problem", true);
+            request.setAttribute("password_mismatch", true);
             RequestDispatcher requestDispatcher = getServletContext().getRequestDispatcher("/WEB-INF/jsp/registration.jsp");
             requestDispatcher.forward(request, response);
         }
